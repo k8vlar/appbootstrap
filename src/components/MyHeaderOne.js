@@ -1,7 +1,8 @@
 import React from "react";
+import "./myCss.module.css";
 
 const MyHead = () => {
-  return <h1 className="blue">Commentaires</h1>;
+  return <p className="blue">Commentaires</p>;
 };
 
 export default MyHead;

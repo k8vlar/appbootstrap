@@ -1,5 +1,7 @@
 import { Component } from "react";
-import MyHead from "../MyHeaderOne";
+import MyHead from "../components/MyHeaderOne";
+import styled from "styled-components";
+import kevin from "../components/myCss.module.css";
 
 class Form extends Component {
   state = {
@@ -32,7 +34,7 @@ class Form extends Component {
   };
 
   render() {
-    // const myClass = this.props.head;
+    // const myClass = this.props.head ?'blue' : 'green';
     return (
       <div>
         <h1>Voici un formulaire</h1>
@@ -53,7 +55,7 @@ class Form extends Component {
               <option value="rouge">Rouge</option>
               <option value="bleu">Bleu</option>
             </select>
-            <select value={this.state.colors} onChange={this.handleColor}>
+            <select onChange={this.handleColor}>
               {this.state.colors.map((color, index) => {
                 return (
                   <option key={index} value={color}>
@@ -71,8 +73,12 @@ class Form extends Component {
             ></textarea>
           </div>
         </form>
-        <MyHead />
-        <p>Je suis Vert ou Bleu</p>
+        <div>
+          <p className={kevin.blue}>Commentaire MyHead</p>
+          <button>Valider</button>
+          <MyHead />
+          <h1>Je suis Vert ou Bleu</h1>
+        </div>
       </div>
     );
   }

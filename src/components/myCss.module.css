@@ -7,4 +7,9 @@
 .bigFont{
     font-size: 40px;
     font-weight: bold;
+    color: blue;
+}
+.subTitle{
+    color:crimson;
+    background-color: cornflowerblue;
 }
